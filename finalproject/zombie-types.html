@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>Favorite Photo Slideshow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="zombies, zombie, zombie game, zombie survival, zombie survival game, parkour, zombie parkour, appocalypse, survivors, dying light, good night and good luck">
+<link href="css/zombie-types.css" rel="stylesheet" media="all">
+<link href="css/print.css" rel="stylesheet"  media="print">
+<link rel="icon" href="media/dying_light.png"><link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <h1><a href="index.html"><img id="header" src="media/dying_light.png"></a></h1>
+<script>
+	var Image = new Array("media/zombie.png", "media/goon2.png", "media/toad.jpg", "media/Viral.png", "media/demolisher.png", "media/volatile.jpg", "media/bolter.png", "media/bomber.png", "media/gastank.jpg", "media/screamer.png", "media/nighthunter.png");
+	var ImageNum=0;
+	var ImageLength = Image.length - 1;
+	function changeImage(number){
+		ImageNum = ImageNum + number;
+		if (ImageNum > ImageLength)
+			ImageNum = 0;
+		if (ImageNum < 0)
+			ImageNum = ImageLength;
+
+		document.getElementById("mySlides").src = Image[ImageNum];
+		return;
+	}
+</script>
+</head>
+<body class="center">
+	<header class="col-12 col-m-12 " >
+		<h2>Zombie Types</h2>
+	</header>
+	<section  class="col-12 col-m-12"> 
+		<button type="button" id="previous" style="display:inline-block;margin-right:10%;" onclick="changeImage(-1)">Previous</button>
+		<button type="button" id="next" onclick="changeImage(1)">Next</button>
+	</section>	
+	<section class="col-12 col-m-12" >	
+		<p style=width:30%;margin-left:5%;"><img alt="photo slideshow" id="mySlides" src="media/zombie.png" style="max-width:150%; min-width:200px; height:auto;padding:10%; 
+	 	 background:#444; box-shadow:5px 5px white;"></p>
+	</section>
+	   <footer> 
+        <div class="icon-bar">
+                <p>
+                <a href="http://lisabalbach.com/"><i class="fa fa-home"></i></a> 
+                <a href="https://twitter.com/DyingLightGame"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/user/DyingLightGame"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.instagram.com/dyinglightgame/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/DyingLightGame/"><i class="fab fa-facebook-square"></i></a></p>
+        </div>   
+    <p>&copy; Kenneth Maleitzke</p></footer>
+</body>
+</html>
+

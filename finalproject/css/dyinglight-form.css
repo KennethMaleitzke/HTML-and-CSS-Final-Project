@@ -1,0 +1,209 @@
+@import url(http://fonts.googleapis.com/css?family=Nixie+One);
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+body{
+	font-family: 'Finger Paint', cursive;
+	background:url('../media/dyinglight-background.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:top left;
+    color:black;
+    font-size:14pt;
+	background-color:#d0afa4;
+}
+form{
+	display:flex;
+	flex-wrap:wrap;
+	/*width:60%;*/
+}
+h1{
+	font-family: 'Finger Paint', cursive;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:2em;
+	text-align:center;
+	color: #A55634;
+	font-weight:900;
+    text-shadow:1px 1px black;
+}
+legend{
+	font-size:1.5em;
+	font-weight:900;
+	margin-top:20px;
+	margin-left:10px;
+	color:black;
+	border-top:3px solid #27234B;
+	border-bottom:3px solid #A55634;
+	box-shadow:2px 2px  #A55634;
+	background-color:white;
+}
+label{
+	text-align:right;
+	width:150px;
+	float:left;
+	padding-right:10px;
+	color:black;
+	font-weight:900;
+	vertical-align:text-top;
+
+}
+p{
+	font-weight:900;
+}
+fieldset {
+	padding:1%;
+	flex:1;
+	min-width:400px;
+	background-color:white;
+	opacity:.9;
+	margin:10px;
+	border: 6px outset #A55634;
+	overflow:auto;
+}
+.inputButton{
+	font-size:14pt;
+	width:100px; 
+	height:30px;
+	font-size:12pt;
+	background-color: #A55634;
+	color:white;
+	font-family: 'Finger Paint', cursive;
+	font-weight:900;
+	margin-top:50px;
+	box-shadow:2px 2px 2px black;
+	text-align:center;
+}
+input{
+	text-align:left;
+	width:200px;
+	font-size:14pt;
+	color:black;
+}
+.shortinputButton{
+	width:20px; 
+	text-align:left;
+}
+.center{
+	margin-left:auto;
+	margin-right:auto;
+}
+nav {
+	width:100%;
+	height:auto;
+    text-align:left;
+    clear:both;
+    float:left;  
+}
+nav a {
+    text-decoration:none;
+}
+nav ul li {
+	list-style:none;
+	margin-left:-35px;
+	border-bottom:gray 2px solid;
+	border-left:gray 2px solid;
+}
+nav ul li a:link, nav ul li a:visited {
+    display:block;
+    background-color:white;
+    color:black;
+   	text-decoration:none;
+}
+nav ul li a:hover, nav ul li a:active{
+    display:block;
+    background-color:black;
+    color:#CA8E6F;
+}
+a:link, a:visited, a:hover,a:active{
+	color:mediumseagreen;
+	text-shadow:1px 1px black;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%; /* this is being overriden in tablet and desktop */
+    float:left; /* setting defaults for everything including tablet and desktop */
+    padding:15px; /* setting defaults for everything including tablet and desktop */
+
+}
+@media only screen and (min-width: 600px) {
+/* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    body{ 
+        max-width:1200px;
+        background:url('../media/dyinglight-background.jpg');
+        background-repeat:no-repeat;
+        background-position:center top;
+        background-color:#111;
+    }
+}
+@keyframes mymove {
+	from {left: 0%;}
+    to {left: 20%;}
+}
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+from {
+    margin-left:200%;
+    width: 300%; 
+    }
+
+to {
+    margin-left: 0%;
+    width: 100%;
+	}
+}
+.icon-bar {
+    width: 100%; /* Full-width */
+    background-color: tan; 
+    overflow: auto; /* Overflow due to float */
+    border: 6px outset #A55634;
+}
+.icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 10%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 36px; /* Increased font size */
+}
+.icon-bar a:hover {
+    background-color: #000; /* Add a hover color */
+    color: #A55634;
+}
